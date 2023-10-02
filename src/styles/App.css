@@ -1,0 +1,135 @@
+:root{
+    --fondo: rgb(91, 145, 164);
+    --fondo-btn: rgb(10,81,109);
+    --fondo-btn-hover: rgb(6, 55, 74);
+    --texto: rgb(255, 255, 255);
+}
+
+html{
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    background: var(--fondo);
+    background: linear-gradient(45deg, rgba(242,243,247,1) 0%, var(--fondo) 100%);
+    font-family: Arial, sans-serif;
+}
+
+main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 110rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0 1.5rem;
+}
+
+@media(min-width: 768px){
+    form{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.img_formula{
+    border-radius: 1rem;
+    max-width: 40rem;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+@media(min-width: 768px){
+    .img_formula{
+        min-width: 22rem;
+    }
+}
+
+.campo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.campo label{
+    font-size: 1.4rem;
+}
+
+.campo input{
+    border-radius: .5rem;
+    border: none;
+    font-size: 1.3rem;
+    padding: .7rem .5rem;
+    text-align: center;
+    outline: none;
+    width: 5rem;
+}
+
+@media(min-width: 768px){
+    .campo input{
+        font-size: 1.2rem;
+        padding: .5rem;
+    }
+}
+
+.btn_submit{
+    background-color: var(--fondo-btn);
+    border: none;
+    border-radius: 1rem;
+    color: var(--texto);
+    display: block;
+    padding: .7rem 1.5rem;
+    font-size: 1.4rem;
+    transition: background-color .3s ease;
+    width: 100%;
+}
+
+.btn_submit:hover{
+    background-color: var(--fondo-btn-hover);
+    cursor: pointer;
+}
+
+@media(min-width: 768px){
+    .btn_submit{
+        padding: .5rem 1.7rem;
+        font-size: 1.3rem;
+        width: auto;
+    }
+}
+
+.fade_in{
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
